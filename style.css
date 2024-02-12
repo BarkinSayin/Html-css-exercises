@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+  --white-color: white;
+  --brown-color: rgba(138, 74, 1, 0.6);
+  --black-color: black;
+}
+.hero-section {
+  height: 100vh;
+  background: url(./images/HeroSection_img.jpg) no-repeat center center/cover;
+  position: relative;
+}
+.blackout {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navbar {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--brown-color);
+  position: absolute;
+  z-index: 1;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-left a,
+.navbar-left img {
+  height: 4.5rem;
+}
+.navbar-right {
+  padding-right: 20px;
+}
+.navbar-right a {
+  padding: 13px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white-color);
+}
+.navbar-right a:hover {
+  border-bottom: 3px solid white;
+}
+.main-content {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 8vh;
+  gap: 2rem;
+}
+.main-content h1 {
+  /* transition: 5s; */
+  font-size: 4rem;
+  color: var(--white-color);
+}
+.main-content p {
+  color: rgb(238, 163, 0);
+  font-size: 18px;
+}
+.main-content a {
+  border: 2px solid rgb(138, 74, 1);
+  color: rgb(138, 74, 1);
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 5px 10px;
+}
+.main-content a:hover {
+  color: var(--white-color);
+  background-color: var(--brown-color);
+  transition: 0.5s;
+}
