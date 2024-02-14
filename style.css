@@ -7,8 +7,11 @@
 }
 :root {
   --white-color: white;
-  --brown-color: rgba(138, 74, 1, 0.6);
+  --brown-color: rgba(138, 74, 1, 0.7);
   --black-color: black;
+}
+body {
+  background-color: rgb(100, 57, 0);
 }
 .hero-section {
   height: 100vh;
@@ -31,7 +34,8 @@
   align-items: center;
   background-color: var(--brown-color);
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  position: fixed;
 }
 .navbar-left {
   display: flex;
@@ -41,7 +45,32 @@
 .navbar-left img {
   height: 4.5rem;
 }
+#searchButton {
+  all: unset;
+  color: white;
+  cursor: pointer;
+  padding: 13px 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#searchBox input {
+  height: 2rem;
+  width: 20rem;
+  border-radius: 4rem;
+  border: none;
+  outline: none;
+}
+#searchBox {
+  position: relative;
+  left: 300px;
+  top: 0;
+}
+.hidden {
+  display: none;
+}
 .navbar-right {
+  height: 6vh;
+  display: flex;
   padding-right: 20px;
 }
 .navbar-right a {
@@ -50,6 +79,7 @@
   font-weight: 600;
   color: var(--white-color);
 }
+#searchButton:hover,
 .navbar-right a:hover {
   border-bottom: 3px solid white;
 }
@@ -65,11 +95,13 @@
   top: 8vh;
   gap: 2rem;
 }
+.info-side h1,
 .main-content h1 {
-  /* transition: 5s; */
-  font-size: 4rem;
+  /* transition: 0.5s; */
+  font-size: 3.5rem;
   color: var(--white-color);
 }
+.info-side p,
 .main-content p {
   color: rgb(238, 163, 0);
   font-size: 18px;
@@ -80,9 +112,24 @@
   font-size: 1.2rem;
   border-radius: 2rem;
   padding: 5px 10px;
+  cursor: pointer;
 }
 .main-content a:hover {
   color: var(--white-color);
   background-color: var(--brown-color);
   transition: 0.5s;
+}
+.first-img img {
+  height: 65vh;
+  width: 40vw;
+}
+.first-info {
+  display: flex;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+.info-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
